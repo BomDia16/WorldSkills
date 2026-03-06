@@ -39,3 +39,7 @@ img {
 .texto {
     width: 40%;
 }
+
+.card:hover {
+    cursor: pointer;
+}
