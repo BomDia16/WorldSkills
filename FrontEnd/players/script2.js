@@ -6,6 +6,9 @@ const tempoAudio = document.getElementById("tempo-audio")
 let tempo2 = parseInt(localStorage.getItem('tempo2')) || 0;  // Inicia com o valor salvo no localStorage, se existir
 let quantidadetempo2 = parseInt(localStorage.getItem('quantidadeTempo2')) || 0;
 
+const progressBar = document.getElementById('progress-bar');
+const mostrarFaltando = document.getElementById('mostrarFaltando')
+
 let intervalo;  // Variável para armazenar o setInterval
 
 btnPlayPause.addEventListener('click', function() {
@@ -33,6 +36,10 @@ audio.addEventListener('timeupdate', function() {
     
     // Exibe o tempo total de audição
     console.log(localStorage.getItem('tempo2'));
+    const value = (audio.currentTime / audio.duration) * 100;
+    progressBar.value = value;
+    tempoFaltando = 60 - audio.currentTime
+    mostrarFaltando.innerHTML = "-0:" + tempoFaltando.toFixed(0).padStart(2, "0");
     
     // Quando o áudio atinge 60 segundos, reinicia, mas sem adicionar tempo extra
     if (this.currentTime >= 60) {

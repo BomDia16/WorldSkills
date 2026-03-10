@@ -22,9 +22,9 @@ const meditacaoMais = document.getElementById('meditacaoMais')
 
 quantidadeMeditacoes.innerHTML = parseInt(quantidadeTempo1) + parseInt(quantidadeTempo2) + parseInt(quantidadeTempo3)
 
-if (quantidadeTempo1 > quantidadeTempo2 && quantidadeTempo1 > quantidadeTempo3) {
+if (parseInt(tempo1) > parseInt(tempo2) && parseInt(tempo1) > parseInt(tempo3)) {
     meditacaoMais.innerHTML = "FICAR SUSSA"
-} else if (quantidadeTempo2 > quantidadeTempo3) {
+} else if (parseInt(tempo2) > parseInt(tempo3)) {
     meditacaoMais.innerHTML = "FOCAR NA TAREFA"
 } else {
     meditacaoMais.innerHTML = "DORMIR DE BOAS"

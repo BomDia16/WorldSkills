@@ -25,3 +25,25 @@ img {
 div {
     width: 100%;
 }
+
+#feliz:hover {
+    animation: pulo 1s ease-in-out infinite;
+}
+
+@keyframes pulo {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-15px); /* Pulo para cima */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px); /* Pequeno ajuste do pulo */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
