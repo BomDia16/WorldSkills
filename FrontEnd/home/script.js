@@ -2,6 +2,16 @@ const div_sussa = document.getElementById("div_ficar_sussa")
 const div_focar = document.getElementById("div_focar_tarefa")
 const div_dormir = document.getElementById("div_dormir")
 
+const viuTutorial = localStorage.getItem('viuTutorial')
+
+if (!localStorage.getItem('viuTutorial')) {
+    localStorage.setItem('viuTutorial', 0)
+}
+
+if (viuTutorial == 0) {
+    window.location.href = '../tutoriais/tutorial1.html'
+}
+
 const tempo1 = localStorage.getItem('tempo1')
 console.log(tempo1)
 const quantidadeTempo1 = localStorage.getItem('quantidadeTempo1')
