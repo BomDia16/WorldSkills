@@ -33,6 +33,7 @@ const tempoAudio = document.getElementById("tempo-audio")
 // });
 
 let tempo1 = parseInt(localStorage.getItem('tempo1')) || 0;  // Inicia com o valor salvo no localStorage, se existir
+let quantidadeTempo1 = parseInt(localStorage.getItem('quantidadeTempo1')) || 0;
 
 let intervalo;  // Variável para armazenar o setInterval
 
@@ -64,6 +65,7 @@ audio.addEventListener('timeupdate', function() {
     
     // Quando o áudio atinge 60 segundos, reinicia, mas sem adicionar tempo extra
     if (this.currentTime >= 60) {
+        localStorage.setItem('quantidadeTempo1', quantidadeTempo1 + 1)
         this.pause();  // Pausa o áudio
         this.currentTime = 0;  // Reinicia o áudio
         btnPlayPause.innerText = "▶ Tocar Meditação";
