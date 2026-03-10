@@ -44,3 +44,60 @@ img {
 .card:hover {
     cursor: pointer;
 }
+
+#img_sussa:hover {
+    animation: pulo 1s ease-in-out infinite;
+}
+
+@keyframes pulo {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-15px); /* Pulo para cima */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px); /* Pequeno ajuste do pulo */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#img_focar:hover {
+    animation: rotateAnimation 1s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#img_dormir:hover {
+    animation: dormir 5s linear infinite
+}
+
+@keyframes dormir {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
