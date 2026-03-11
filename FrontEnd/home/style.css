@@ -108,3 +108,7 @@ img {
         transform: rotate(90deg);
     }
 }
+
+.avancar:hover {
+    transform: scale(1.1);
+}

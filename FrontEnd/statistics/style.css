@@ -55,3 +55,7 @@ div {
         transform: translateY(0);
     }
 }
+
+.avancar:hover {
+    transform: scale(1.1);
+}

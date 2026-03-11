@@ -12,6 +12,12 @@ if (viuTutorial == 0) {
     window.location.href = '../tutoriais/tutorial1.html'
 }
 
+const voltarTutorial = document.getElementById('voltarTutorial')
+voltarTutorial.addEventListener('click', function() {
+    localStorage.setItem('viuTutorial', 0)
+    window.location.href = "../tutoriais/tutorial1.html"
+})
+
 const tempo1 = localStorage.getItem('tempo1')
 console.log(tempo1)
 const quantidadeTempo1 = localStorage.getItem('quantidadeTempo1')
