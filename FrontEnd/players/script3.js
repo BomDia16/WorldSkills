@@ -36,7 +36,7 @@ audio.addEventListener('timeupdate', function() {
     
     // Exibe o tempo total de audição
     console.log(localStorage.getItem('tempo3'));
-    const value = (audio.currentTime / audio.duration) * 100;
+    const value = audio.currentTime.toFixed(0);
     progressBar.value = value;
     tempoFaltando = 60 - audio.currentTime
     mostrarFaltando.innerHTML = "-0:" + tempoFaltando.toFixed(0).padStart(2, "0");

@@ -52,7 +52,7 @@ img {
     cursor: pointer;
 }
 
-#img_sussa:hover {
+#img_sussa {
     animation: pulo 1s ease-in-out infinite;
 }
 
@@ -74,7 +74,7 @@ img {
     }
 }
 
-#img_focar:hover {
+#img_focar {
     animation: rotateAnimation 1s linear infinite;
 }
 
@@ -96,7 +96,7 @@ img {
     }
 }
 
-#img_dormir:hover {
+#img_dormir {
     animation: dormir 5s linear infinite
 }
 
