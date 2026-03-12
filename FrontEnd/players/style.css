@@ -12,6 +12,7 @@ body {
     height: 480px;
     width: 320px;
     background-color: lightblue;
+    border: 1px solid black;
 }
 
 nav {
@@ -36,6 +37,7 @@ div {
 
 .logo {
     height: 150px;
+    margin-top: 40px;
 }
 
 .avancar:hover {

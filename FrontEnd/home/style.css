@@ -12,6 +12,7 @@ body {
     height: 480px;
     width: 320px;
     background-color: lightblue;
+    border: 1px solid black;
 }
 
 nav {
@@ -115,4 +116,34 @@ img {
 
 .avancar:hover {
     transform: scale(1.1);
+}
+
+.page{
+  animation: slideIn 0.5s forwards;
+}
+
+.slide-out{
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn{
+  from{
+    transform: translateX(100%);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
+@keyframes slideOut{
+  from{
+    transform: translateX(0);
+    opacity:1;
+  }
+  to{
+    transform: translateX(-100%);
+    opacity:0;
+  }
 }

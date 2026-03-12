@@ -34,14 +34,32 @@ console.log(tempo3)
 const quantidadeTempo3 = localStorage.getItem('quantidadeTempo3')
 console.log(quantidadeTempo3)
 
-div_sussa.addEventListener("click", function() {
-    window.location.href = "../players/sussa.html"
+div_sussa.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    document.body.classList.add("slide-out")
+
+    setTimeout(()=>{
+      window.location.href = "../players/sussa.html"
+    },500)
 })
 
-div_focar.addEventListener("click", function() {
-    window.location.href = "../players/focar.html"
+div_focar.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    document.body.classList.add("slide-out")
+
+    setTimeout(()=>{
+      window.location.href = "../players/focar.html"
+    },500)
 })
 
-div_dormir.addEventListener("click", function() {
-    window.location.href = "../players/dormir.html"
+div_dormir.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    document.body.classList.add("slide-out")
+
+    setTimeout(()=>{
+      window.location.href = "../players/dormir.html"
+    },500)
 })
