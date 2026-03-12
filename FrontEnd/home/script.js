@@ -8,9 +8,12 @@ if (!localStorage.getItem('viuTutorial')) {
     localStorage.setItem('viuTutorial', 0)
 }
 
-if (viuTutorial == 0) {
-    window.location.href = '../tutoriais/tutorial1.html'
-}
+document.addEventListener('DOMContentLoaded', function() {
+    if (viuTutorial == 0) {
+        window.location.href = '../tutoriais/tutorial1.html'
+    }
+})
+
 
 const voltarTutorial = document.getElementById('voltarTutorial')
 voltarTutorial.addEventListener('click', function() {

@@ -6,6 +6,12 @@ const audio = document.getElementById("audio")
 
 const btnPlayPause = document.getElementById('btn-play-pause');
 const tempoAudio = document.getElementById("tempo-audio")
+const viuTutorial = localStorage.getItem("viuTutorial")
+document.addEventListener('DOMContentLoaded', function() {
+    if (viuTutorial == 0) {
+        window.location.href = '../tutoriais/tutorial1.html'
+    }
+})
 
 // let tempo1 = parseInt(localStorage.getItem('tempo1'))
 

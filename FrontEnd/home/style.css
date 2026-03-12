@@ -56,6 +56,10 @@ img {
     animation: pulo 1s ease-in-out infinite;
 }
 
+#voltarTutorial:hover {
+    cursor: pointer;
+}
+
 @keyframes pulo {
     0% {
         transform: translateY(0);

@@ -5,6 +5,12 @@ const tempoAudio = document.getElementById("tempo-audio")
 
 let tempo3 = parseInt(localStorage.getItem('tempo3')) || 0;  // Inicia com o valor salvo no localStorage, se existir
 let quantidadetempo3 = parseInt(localStorage.getItem('quantidadeTempo3')) || 0;
+const viuTutorial = localStorage.getItem("viuTutorial")
+document.addEventListener('DOMContentLoaded', function() {
+    if (viuTutorial == 0) {
+        window.location.href = '../tutoriais/tutorial1.html'
+    }
+})
 
 let intervalo;  // Variável para armazenar o setInterval
 
