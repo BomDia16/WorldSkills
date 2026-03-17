@@ -13,31 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-// let tempo1 = parseInt(localStorage.getItem('tempo1'))
-
-// btnPlayPause.addEventListener('click', function() {
-//     if (audio.paused) {
-//         audio.play();
-//         btnPlayPause.innerText = "⏸ Pausar Meditação";
-//     } else {
-//         audio.pause();
-//         btnPlayPause.innerText = "▶ Tocar Meditação";
-//         localStorage.setItem('tempo1', tempo1)
-//     }
-// });
-
-// audio.addEventListener('timeupdate', function() {
-//     tempoAudio.innerHTML = "0:"+this.currentTime.toFixed(0).padStart(2, "0")
-//     tempo1 = Math.floor(this.currentTime)
-//     console.log(localStorage.getItem('tempo1'))
-//     if (this.currentTime >= 60) {
-//         this.pause();
-//         localStorage.setItem('tempo1', tempo1)
-//         this.currentTime = 0;
-//         btnPlayPause.innerText = "▶ Tocar Meditação";
-//     }
-// });
-
 let tempo1 = parseInt(localStorage.getItem('tempo1')) || 0;  // Inicia com o valor salvo no localStorage, se existir
 let quantidadeTempo1 = parseInt(localStorage.getItem('quantidadeTempo1')) || 0;
 
@@ -73,7 +48,7 @@ audio.addEventListener('timeupdate', function() {
     console.log(localStorage.getItem('tempo1'));
     const value = audio.currentTime.toFixed(0);
     progressBar.value = value;
-    tempoFaltando = 60 - audio.currentTime
+    let tempoFaltando = 60 - audio.currentTime
     mostrarFaltando.innerHTML = "-0:" + tempoFaltando.toFixed(0).padStart(2, "0");
     
     // Quando o áudio atinge 60 segundos, reinicia, mas sem adicionar tempo extra
