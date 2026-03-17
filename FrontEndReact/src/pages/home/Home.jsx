@@ -15,6 +15,14 @@ function Home() {
     function sussa() {
         navigate('sussa')
     }
+    
+    function focar() {
+        navigate('focar')
+    }
+    
+    function dormir() {
+        navigate('dormir')
+    }
 
     return (
         <>
@@ -63,6 +71,7 @@ function Home() {
                     className="card" 
                     id="div_focar_tarefa" 
                     style={{ backgroundColor: "rgb(255, 105, 105)" }}
+                    onClick={focar}
                 >
                     <img id="img_focar" src={img_focar} alt="" />
                     
@@ -83,6 +92,7 @@ function Home() {
                     className="card" 
                     id="div_dormir" 
                     style={{ backgroundColor: "rgb(88, 180, 255)" }}
+                    onClick={dormir}
                 >
                     <img id="img_dormir" src={img_dormir} alt="" />
                     

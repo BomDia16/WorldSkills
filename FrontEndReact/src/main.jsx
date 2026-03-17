@@ -9,6 +9,9 @@ import Tutorial1 from './pages/tutoriais/Tutorial1.jsx';
 import Tutorial2 from './pages/tutoriais/Tutorial2.jsx';
 import Tutorial3 from './pages/tutoriais/Tutorial3.jsx';
 import Sussa from './pages/players/Sussa.jsx';
+import Focar from './pages/players/Focar.jsx';
+import Dormir from './pages/players/Dormir.jsx';
+import Statistics from './pages/statistics/Statistics.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,6 +22,9 @@ createRoot(document.getElementById('root')).render(
         <Route path='/tutorial2' element={ <Tutorial2 /> } />
         <Route path='/tutorial3' element={ <Tutorial3 /> } />
         <Route path='/sussa' element={ <Sussa /> } />
+        <Route path='/focar' element={ <Focar /> } />
+        <Route path='/dormir' element={ <Dormir /> } />
+        <Route path='/statistics' element={ <Statistics /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
