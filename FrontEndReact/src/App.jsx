@@ -10,6 +10,9 @@ function App() {
   return (
     <>
       <section id="center">
+        <h1 class="text-3xl font-bold underline bg-sky-900">
+          Hello world!
+        </h1>
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
