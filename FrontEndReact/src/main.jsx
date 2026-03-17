@@ -3,11 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
+import Home from './pages/home/Home.jsx';
 import React from 'react';
 import Tutorial1 from './pages/tutoriais/Tutorial1.jsx';
 import Tutorial2 from './pages/tutoriais/Tutorial2.jsx';
 import Tutorial3 from './pages/tutoriais/Tutorial3.jsx';
+import Sussa from './pages/players/Sussa.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/tutorial1' element={ <Tutorial1 /> } />
         <Route path='/tutorial2' element={ <Tutorial2 /> } />
         <Route path='/tutorial3' element={ <Tutorial3 /> } />
+        <Route path='/sussa' element={ <Sussa /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
