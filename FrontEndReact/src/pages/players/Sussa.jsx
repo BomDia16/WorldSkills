@@ -2,8 +2,23 @@ import React from 'react'
 import audio from '../../assets/Midias/meditacao.mp3'
 import img_sussa from '../../assets/Midias/Bob/sussa.png'
 import './Style.css'
+import { useNavigate } from 'react-router-dom'
 
 function Sussa() {
+
+    const viuTutorial = localStorage.getItem('viuTutorial') || 0
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (viuTutorial == 0) {
+            voltar()
+        }
+    })
+
+    const navigate = useNavigate()
+
+    function voltar() {
+        navigate('tutorial1')
+    }
 
     let intervalo;
     function TocarPausar() {

@@ -6,10 +6,19 @@ import { useNavigate } from 'react-router-dom'
 
 function Home() {
 
+    const viuTutorial = localStorage.getItem('viuTutorial') || 0
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (viuTutorial == 0) {
+            voltar()
+        }
+    })
+
     const navigate = useNavigate()
 
     function voltar() {
         navigate('tutorial1')
+        localStorage.setItem('viuTutorial', 0)
     }
 
     function sussa() {
