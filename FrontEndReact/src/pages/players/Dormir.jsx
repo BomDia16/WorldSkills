@@ -82,7 +82,7 @@ function Dormir() {
         }
     }
     return (
-        <div className="container" style={{backgroundColor: "rgb(255, 105, 105)"}}>
+        <div className="container page" style={{backgroundColor: "rgb(255, 105, 105)"}}>
             <nav>
                 <a href="/"><img className="close" src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" alt="back" /></a>
             </nav>

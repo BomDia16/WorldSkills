@@ -8,7 +8,6 @@ import { useEffect } from 'react'
 function Home() {
 
     const viuTutorial = localStorage.getItem('viuTutorial') || 0
-
     
     const navigate = useNavigate()
     
@@ -38,7 +37,7 @@ function Home() {
 
     return (
         <>
-            <div className="container">
+            <div className="container page">
                 <nav>
                     <img 
                         className="logos" 

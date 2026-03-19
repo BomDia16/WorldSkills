@@ -69,6 +69,10 @@ function Statistics() {
         }
     }, [])
 
+    function test() {
+        navigate('/test')
+    }
+
 
     return (
         <div class="container">
@@ -76,7 +80,7 @@ function Statistics() {
                 <a href="/"><img style={{width: "32px"}} class="" src="https://cdn-icons-png.flaticon.com/128/2732/2732652.png" alt="back" /></a>
             </nav>
             <h3>MINHAS ESTATÍSTICAS</h3>
-            <div style={{borderBottom: "1px solid black; height: 1px;"}}></div>
+            <div style={{borderBottom: "1px solid black"}}></div>
             
             <h3>MEDITAÇÕES REALIZADAS</h3>
             <p id="quantidadeMeditacoes"></p>
@@ -85,7 +89,7 @@ function Statistics() {
             <p id="tempoTotal"></p>
 
             <h3>OBJETIVO MAIS UTILIZADO</h3>
-            <p id="meditacaoMais"></p>
+            <p onClick={test} id="meditacaoMais"></p>
 
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img id="feliz" src={feliz} alt="" /></a>
         </div>

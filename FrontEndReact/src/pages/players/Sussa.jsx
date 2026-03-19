@@ -83,7 +83,7 @@ function Sussa() {
     }
 
   return (
-    <div className="container" style={{backgroundColor: "rgb(163, 255, 88)"}}>
+    <div className="container page" style={{backgroundColor: "rgb(163, 255, 88)"}}>
         <nav>
             <a href="/"><img className="close" src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" alt="back" /></a>
         </nav>

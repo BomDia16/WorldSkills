@@ -11,6 +11,7 @@ import Sussa from './pages/players/Sussa.jsx';
 import Focar from './pages/players/Focar.jsx';
 import Dormir from './pages/players/Dormir.jsx';
 import Statistics from './pages/statistics/Statistics.jsx';
+import Test from './pages/testeTailwind/Test.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/focar' element={ <Focar /> } />
         <Route path='/dormir' element={ <Dormir /> } />
         <Route path='/statistics' element={ <Statistics /> } />
+        <Route path='/test' element={ <Test /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
