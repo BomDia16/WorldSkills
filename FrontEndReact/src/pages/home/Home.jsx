@@ -3,23 +3,26 @@ import img_focar from '../../assets/Midias/Bob/focar.png'
 import img_dormir from '../../assets/Midias/Bob/dormir.png'
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function Home() {
 
     const viuTutorial = localStorage.getItem('viuTutorial') || 0
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if (viuTutorial == 0) {
-            voltar()
-        }
-    })
-
+    
     const navigate = useNavigate()
-
+    
     function voltar() {
         navigate('tutorial1')
         localStorage.setItem('viuTutorial', 0)
     }
+
+    useEffect(() => {
+        if (viuTutorial == 0) {
+            console.log("ehjg")
+            voltar()
+        }
+    }, [])
 
     function sussa() {
         navigate('sussa')

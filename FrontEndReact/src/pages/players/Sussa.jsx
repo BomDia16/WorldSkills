@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import audio from '../../assets/Midias/meditacao.mp3'
 import img_sussa from '../../assets/Midias/Bob/sussa.png'
 import './Style.css'
@@ -8,16 +8,16 @@ function Sussa() {
 
     const viuTutorial = localStorage.getItem('viuTutorial') || 0
 
-    document.addEventListener('DOMContentLoaded', function() {
+    useEffect(() => {
         if (viuTutorial == 0) {
             voltar()
         }
-    })
+    }, [])
 
     const navigate = useNavigate()
 
     function voltar() {
-        navigate('tutorial1')
+        navigate('/tutorial1')
     }
 
     let intervalo;
@@ -104,7 +104,7 @@ function Sussa() {
         </div>
         <input type="range" id="progress-bar" value="0" max="60" step="1" disabled />
 
-        <button className="avancar" id="btn-play-pause" onClick={TocarPausar}>▶ Tocar Meditação</button>
+        <button style={{width: "70%"}} className="" id="btn-play-pause" onClick={TocarPausar}>▶ Tocar Meditação</button>
 
         <h2 style={{textAlign: "center"}}>FICAR SUSSA</h2>
     </div>

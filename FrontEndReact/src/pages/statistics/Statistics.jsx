@@ -7,19 +7,17 @@ function Statistics() {
 
     const viuTutorial = localStorage.getItem('viuTutorial') || 0
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if (viuTutorial == 0) {
-            voltar()
-        }
-    })
-
     const navigate = useNavigate()
 
     function voltar() {
-        navigate('tutorial1')
+        navigate('/tutorial1')
     }
 
     useEffect(() => {
+
+        if (viuTutorial == 0) {
+            voltar()
+        }
 
         // Medicoes com tempo
         let tempo1 = localStorage.getItem('tempo1')
@@ -75,7 +73,7 @@ function Statistics() {
     return (
         <div class="container">
             <nav>
-                <a href="/"><img class="avancar" src="https://cdn-icons-png.flaticon.com/128/2732/2732652.png" alt="back" /></a>
+                <a href="/"><img style={{width: "32px"}} class="" src="https://cdn-icons-png.flaticon.com/128/2732/2732652.png" alt="back" /></a>
             </nav>
             <h3>MINHAS ESTATÍSTICAS</h3>
             <div style={{borderBottom: "1px solid black; height: 1px;"}}></div>

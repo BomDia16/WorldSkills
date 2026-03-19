@@ -43,6 +43,7 @@ div {
 .logo {
     height: 150px;
     margin-top: 40px;
+    width: 100px;
 }
 
 .avancar:hover {

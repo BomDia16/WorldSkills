@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import tutorial3 from '../../assets/Midias/Bob/tutorial3.png'
 import { useNavigate } from 'react-router-dom'
 
@@ -6,11 +6,11 @@ function Tutorial3() {
 
     const viuTutorial = localStorage.getItem('viuTutorial') || 0
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if (viuTutorial == 0) {
-            voltar()
+    useEffect(() => {
+        if (viuTutorial != 0) {
+          navigate('/')
         }
-    })
+    }, [])
 
     const navigate = useNavigate()
 
@@ -23,10 +23,10 @@ function Tutorial3() {
     }
 
   return (
-    <div class="container">
-        <p>Você pode acompanhar sua evolução em ficar "De boas" com as nossas estatísticas inteligentes.</p>
-        <img src={tutorial3} alt="" />
-        <a onClick={terminarTutorial()} href="/"><button class="avancar">Próximo</button></a>
+    <div class="container" style={{justifyContent:"space-around", }}>
+        <p style={{width: "80%"}}>Você pode acompanhar sua evolução em ficar "De boas" com as nossas estatísticas inteligentes.</p>
+        <img style={{height:"200px", width: "200px"}} src={tutorial3} alt="" />
+        <a onClick={terminarTutorial} href="/"><button style={{width:"100%", cursor: "pointer"}} class="">Próximo</button></a>
     </div>
   )
 }

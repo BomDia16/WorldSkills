@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 function Tutorial2() {
 
   const viuTutorial = localStorage.getItem('viuTutorial') || 0
+  const tutorial1 = localStorage.getItem('viuTutorial') || 0
 
   const navigate = useNavigate()
 
@@ -19,10 +20,10 @@ function Tutorial2() {
 
 
   return (
-    <div class="container">
-        <p>É divertido e ajudamos você a ficar motivado com recompensas pelo seu empenho em ficar "De Boas"</p>
-        <img src={tutorial2} alt="" />
-        <a href="/tutorial3"><button class="avancar">Próximo</button></a>
+    <div class="container" style={{justifyContent:"space-around", }}>
+        <p style={{width: "80%"}}>É divertido e ajudamos você a ficar motivado com recompensas pelo seu empenho em ficar "De Boas"</p>
+        <img style={{height:"200px", width: "200px"}} src={tutorial2} alt="" />
+        <a href="/tutorial3"><button style={{width:"100%", cursor: "pointer"}} class="">Próximo</button></a>
     </div>
   )
 }
