@@ -12,6 +12,7 @@ function App() {
     <>
         <div className='flex flex-row-reverse'>
           <Navbar></Navbar>
+          <Navbar></Navbar>
           <Sidebar></Sidebar>
         </div>
     </>
