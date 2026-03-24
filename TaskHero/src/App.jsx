@@ -16,7 +16,6 @@ function App() {
             <Navbar name="text-red-500"></Navbar>
             <Tasks></Tasks>
           </div>
-          <Sidebar></Sidebar>
         </div>
     </>
   )

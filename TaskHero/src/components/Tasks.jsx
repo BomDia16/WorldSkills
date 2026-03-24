@@ -1,37 +1,39 @@
 import React, { useState } from 'react'
 
 function Tasks() {
-
-    let task = [
-        "limpar os vidros",
-        "limpar a geladeira"
-    ]
-
     const [hover, setHover] = useState(false)
 
-    localStorage.setItem("tasks", task)
-    let tasks = localStorage.getItem("tasks")
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+    let tarefas_concluidas = localStorage.getItem("tasks_done") || 0
 
-    const [items, setItems] = useState(tasks.split(","))
+    const [items, setItems] = useState(tasks)
     
     const remover = (tarefa) => {
-        setItems(prevLista => prevLista.filter(item => item !== tarefa));
+        const nova_lista = items.filter(item => item !== tarefa)
+        setItems(nova_lista);
+        localStorage.setItem("tasks", JSON.stringify(nova_lista))
+        localStorage.setItem("tasks_done", parseInt(tarefas_concluidas) + 1)
     };
 
     const adicionar = () => {
         let tarefa = document.getElementById("nova_tarefa")
-        setItems([...items, tarefa.value])
-        tarefa.value = ""
+
+        if (tarefa.value != "") {
+            const nova_lista = [...items, tarefa.value]
+            setItems(nova_lista)
+            tarefa.value = ""
+            localStorage.setItem('tasks', JSON.stringify(nova_lista))
+        }
     }
 
     return (
-        <div className='bg-amber-200' style={{width: "70%", marginTop: "100px"}}>
+        <div className='bg-amber-200' style={{width: "90%", marginTop: "100px"}}>
             <h1>Tasks</h1>
             <input className='block text-gray-700 text-sm font-bold mb-2 border-b-2' type="text" name="" id="nova_tarefa" placeholder='Adicione uma nova tarefa' />
             <button
                 onMouseEnter={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
-                style={{cursor: hover ? 'pointer' : 'default'}}
+                style={{cursor: hover ? 'pointer' : 'default', marginBottom: "10px"}}
                 type="submit"
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
                 onClick={adicionar}>
