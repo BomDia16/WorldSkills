@@ -9,7 +9,7 @@ function StatisticsCard() {
 
     useEffect(() => {
         document.getElementById("qtd_tarefas").innerHTML = localStorage.getItem("tasks_done") || 0
-        document.getElementById("qtd_pontos").innerHTML = localStorage.getItem("tasks_done") || 0
+        document.getElementById("qtd_pontos").innerHTML = localStorage.getItem("pontos") || 0
 
         let nivel = ""
 

@@ -5,6 +5,7 @@ function Tasks() {
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || []
     let tarefas_concluidas = localStorage.getItem("tasks_done") || 0
+    let pontos = localStorage.getItem("pontos") || 0
 
     const [items, setItems] = useState(tasks)
     
@@ -13,6 +14,7 @@ function Tasks() {
         setItems(nova_lista);
         localStorage.setItem("tasks", JSON.stringify(nova_lista))
         localStorage.setItem("tasks_done", parseInt(tarefas_concluidas) + 1)
+        localStorage.setItem('pontos', parseInt(pontos) + 1)
     };
 
     const adicionar = () => {
