@@ -74,6 +74,32 @@ function Diaria() {
         }
     }, []);
 
+    const [tempoRestante, setTempoRestante] = useState("")
+
+    useEffect(() => {
+        const atualizarTempo = () => {
+            const agora = new Date()
+
+            const meiaNoite = new Date()
+            meiaNoite.setHours(24, 0, 0, 0) // próxima meia-noite
+
+            const diferenca = meiaNoite - agora
+
+            const horas = Math.floor(diferenca / (1000 * 60 * 60))
+            const minutos = Math.floor((diferenca / (1000 * 60)) % 60)
+            const segundos = Math.floor((diferenca / 1000) % 60)
+
+            const formatado = `${String(horas).padStart(2, "0")}:${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`
+
+            setTempoRestante(formatado)
+        }
+
+        atualizarTempo()
+        const interval = setInterval(atualizarTempo, 1000)
+
+        return () => clearInterval(interval)
+    }, [])
+
     return (
         <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -84,12 +110,14 @@ function Diaria() {
             <div className='flex flex-col'>
                 <Navbar name="text-red-500" />
 
-                {mostrarDiaria && diaria && !diaria.completed && (
-                    <div className='flex items-center justify-center' style={{paddingTop: "100px"}}>
-                        <p>{diaria.task}</p>
-                        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' style={{marginLeft: "20px"}} onClick={terminarDiaria}>Concluir</button>
-                    </div>
-                )}
+                <div className='flex items-center justify-center' style={{paddingTop: "100px"}}>
+                    {mostrarDiaria && diaria && !diaria.completed ? (
+                        <div>
+                            <p>{diaria.task}</p>
+                            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' style={{marginLeft: "20px"}} onClick={terminarDiaria}>Concluir</button>
+                        </div>
+                    ) : <p>Tarefa diária realizada, volte daqui a {tempoRestante} para a próxima!</p>}
+                </div>         
             </div>
         </motion.div>
     )
