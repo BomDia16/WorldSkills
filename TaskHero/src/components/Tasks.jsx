@@ -27,7 +27,7 @@ function Tasks() {
     }
 
     return (
-        <div className='bg-amber-200' style={{width: "90%", marginTop: "100px"}}>
+        <div className='bg-amber-200 flex flex-col items-center' style={{width: "90%", marginTop: "100px"}}>
             <h1 className='text-xl'>Tasks</h1>
             <input className='block text-gray-700 text-sm font-bold mb-2 border-b-2' type="text" name="" id="nova_tarefa" placeholder='Adicione uma nova tarefa' />
             <button
