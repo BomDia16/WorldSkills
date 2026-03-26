@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -6,8 +6,20 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Tasks from './components/Tasks'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    let viuTutorial = parseInt(localStorage.getItem('viuTutorial') || 0)
+  
+    if (viuTutorial == 0) {
+      navigate('/tutorial')
+    }
+  }, [])
+
 
   return (
     <>

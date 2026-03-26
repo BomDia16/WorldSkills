@@ -14,6 +14,7 @@ function Navbar({name}) {
     }
 
     function tutorial() {
+        localStorage.setItem('viuTutorial', 0)
         navigate('/tutorial')
     }
 
@@ -21,7 +22,7 @@ function Navbar({name}) {
         <div className='w-full h-20 bg-blue-500 flex flex-row justify-between items-center'>
             <a onClick={home} className='ml-4'>TaskHero</a>
             <div className='w-44 flex justify-around'>
-                <a onClick={tutorial}>config</a>
+                <a onClick={tutorial}>Tutorial</a>
                 <a>conta</a>
                 <a onClick={statistics} className={`${name}`}>Estatísticas</a>
             </div>

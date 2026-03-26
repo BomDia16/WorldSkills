@@ -2,7 +2,9 @@ import React from 'react'
 
 function TutorialCard({message}) {
     return (
-        <div>{message}</div>
+        <div className='flex justify-center w-100 h-100 items-center'>
+            <p className='w-60'>{message}</p>
+        </div>
     )
 }
 
