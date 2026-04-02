@@ -35,8 +35,8 @@ function Statistics() {
 
             {porcentagem < 10 && <img  className='h-20' src={pouco} />}
             {porcentagem > 9 && porcentagem < 50 && <img  className='h-20' src={medio} />}
-            {porcentagem > 49 && <img  className='h-20' src={alto} />}
-            <p>{porcentagem}% de tarefas concluídas</p>
+            {porcentagem > 49 && <img  className='h-20 left' src={alto} />}
+            <p>{porcentagem.toFixed(2)}% de tarefas concluídas</p>
         </div>
     )
 }
