@@ -27,12 +27,11 @@ function Adicionar() {
                 'descricao': descricao,
                 'status': status_select
             }
-            console.log(dados)
-    
-            tarefas.push(dados)
-    
-            setTarefas(tarefas)
-            localStorage.setItem("tarefas_pendentes", JSON.stringify(tarefas))
+
+            const novasTarefas = [...tarefas, dados]
+            setTarefas(novasTarefas)
+
+            localStorage.setItem("tarefas_pendentes", JSON.stringify(novasTarefas))
 
             document.getElementById('titulo').value = ""
             document.getElementById('descricao').value = ""

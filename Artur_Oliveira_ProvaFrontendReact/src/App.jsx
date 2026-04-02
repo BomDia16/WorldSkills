@@ -94,7 +94,7 @@ function App() {
             </div>
             <div>
               <button
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:cursor-pointer' onClick={adicionar}>Adicionar Tarefa +
+                className='bg-blue-500 bottom-10 fixed hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:cursor-pointer' onClick={adicionar}>Adicionar Tarefa +
               </button>
             </div>
 
