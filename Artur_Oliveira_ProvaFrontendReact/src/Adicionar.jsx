@@ -10,6 +10,7 @@ function Adicionar() {
     console.log(tarefas_salvas)
     
     let [tarefas, setTarefas] = useState(tarefas_salvas)
+    let [animar, setAnimar] = useState(false)
 
     function voltar() {
         navigate('/')
@@ -36,11 +37,20 @@ function Adicionar() {
             document.getElementById('titulo').value = ""
             document.getElementById('descricao').value = ""
             document.getElementById('erro').innerHTML = "Tarefa inserida com sucesso"
+            ativarAnimacao()
 
         } else {
             document.getElementById('erro').innerHTML = "O título não pode ser vazio"
         }
 
+    }
+
+    function ativarAnimacao() {
+        setAnimar(true)
+
+        setTimeout(() => {
+            setAnimar(false)
+        }, 2000)
     }
 
     function statistics() {
@@ -54,6 +64,7 @@ function Adicionar() {
                 <h1>Adicionar</h1>
                 <h1 onClick={statistics}>Estatísticas</h1>
             </nav>
+
             <p id='erro'></p>
             <p>Título da Tarefa</p>
             <input id="titulo" style={{border: "1px solid black"}} type="text" />
@@ -67,9 +78,10 @@ function Adicionar() {
                 <option value="Em andamento">Em andamento</option>
                 <option value="Finalizada">Finalizada</option>
             </select>
-            <button onClick={salvar} style={{border: "1px solid black", marginTop: "10px"}}>Salvar</button>
+            <button className='hover:bg-gray-400 hover:cursor-pointer' onClick={salvar} style={{border: "1px solid black", marginTop: "10px"}}>Salvar</button>
 
-            <img className='h-30' src={criar} alt="" />
+            <img className={` mt-10 h-30 ${animar ? 'animate-bounce' : ''}`} 
+            src={criar} alt="" />
         </div>
     )
 }
