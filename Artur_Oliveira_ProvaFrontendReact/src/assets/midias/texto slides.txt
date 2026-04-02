@@ -1,0 +1,41 @@
+Tela 1 — Apresentação
+
+Título:
+Bem-vindo ao DailyFlow
+
+Texto:
+Organize sua rotina e mantenha suas tarefas sob controle de forma simples.
+
+Apoio do mascote:
+Flow em estado neutro (recepcionando)
+
+Botão:
+Próximo
+
+Tela 2 — Organização de tarefas
+
+Título:
+Organize suas tarefas
+
+Texto:
+Crie tarefas, defina status e acompanhe tudo em um só lugar.
+
+Apoio do mascote:
+Flow ativo (mostrando ação / produtividade)
+
+Botão:
+Próximo
+
+Tela 3 — Produtividade
+
+Título:
+Acompanhe seu progresso
+
+Texto:
+Veja sua evolução e complete suas tarefas para manter o fluxo.
+
+Apoio do mascote:
+Flow feliz (progresso alto)
+
+Botão:
+Começar
