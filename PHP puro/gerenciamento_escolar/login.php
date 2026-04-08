@@ -16,11 +16,15 @@
         $objDb = new db();
         $link = $objDb->connectMysql();
 
-        $sql_query = "select email, senha from admins as a WHERE a.email = '$email' AND a.senha = '$senha'";
+        $sql_query = "select * from admins as a WHERE a.email = '$email' AND a.senha = '$senha'";
 
-
-        if (mysqli_query($link, $sql_query)) {
-            echo "Usuário encontrado com sucesso!";
+        $procurar = mysqli_query($link, $sql_query);
+        if (mysqli_num_rows($procurar) == 1) {
+            while ($linha = mysqli_fetch_assoc($procurar)) {
+                echo $linha['email'];
+                $_SESSION['email'] = $linha['email'];
+            }
+            header("Location: http://localhost:8080/gerenciamento_escolar/");
         } else {
             header("Location: http://localhost:8080/gerenciamento_escolar/login_view.php?erro=1");
         }
