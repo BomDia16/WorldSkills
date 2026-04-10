@@ -2,9 +2,9 @@
 
 session_start();
 
-// if (!isset($_SESSION['email'])) {
-//     header("Location: index.php");
-// }
+if (!isset($_SESSION['email'])) {
+    header("Location: index.php");
+}
 
 require_once('../controllers/ProfessorController.php');
 
@@ -83,5 +83,5 @@ if (isset($_GET['edit'])) {
             </form>
         </td>
     </tr>
-    <?php } ?>    
+    <?php } ?>
 </table>

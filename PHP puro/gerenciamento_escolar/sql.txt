@@ -1,16 +1,16 @@
 create DATABASE gerenciamento_escolar;
-create table admin (
+create table admins (
     id int PRIMARY KEY not null AUTO_INCREMENT,
     nome varchar(45) not null,
     email varchar(45) not null unique,
-    senha varchar(25) not null
+    senha varchar(300) not null
 );
 
 create table professores (
     id int PRIMARY KEY not null AUTO_INCREMENT,
     nome varchar(45) not null,
     email varchar(45) not null unique,
-    senha varchar(25) not null
+    senha varchar(300) not null
 );
 
 create table areas (

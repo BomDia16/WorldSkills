@@ -1,9 +1,9 @@
 <?php
 
-    require_once('../controllers/ProfessorController.php');
+    require_once('../controllers/AdminController.php');
 
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        $controller = new ProfessorController();
+        $controller = new AdminController();
         $controller->logar();
     }
 
@@ -27,7 +27,7 @@
     <form method="post">
         <p id="erro"></p>
         <input type="text" name="email" placeholder="email">
-        <input type="password" name="senha" placeholder="senha" id="">
+        <input type="password" name="senha" placeholder="senha">
         <button type="submit">Logar</button>
     </form>
 

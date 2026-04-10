@@ -73,34 +73,5 @@
             }
         }
 
-        public function logar() {
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-                global $conn;
-
-                $email = $_POST['email'];
-                $senha = $_POST['senha'];
-
-                $prof = new Professor();
-                $result = $prof->login($conn, $email);
-
-                if ($result->num_rows == 1) {
-                    $professor = $result->fetch_assoc();
-
-                    if(password_verify($senha, $professor['senha'])) {
-                        $_SESSION['email'] = $professor['email'];
-                        header("Location: professores.php");
-                        exit;
-                    }else {
-                        header("Location: index.php?erro=1");
-                        exit;
-                    }
-                } else {
-                    header("Location: index.php?erro=1");
-                    exit;
-                }
-            }
-        }
-
         
     }
