@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
-#[Fillable(['nome', 'email', 'senha'])]
+// #[Fillable(['nome', 'email', 'senha'])]
 class Admin extends Model
 {
     protected $table = 'admins';
+    protected $fillable = ['nome', 'email', 'senha'];
 
     public function inserir($dados) {
         $cadastrar = $this->create([

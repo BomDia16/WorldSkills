@@ -19,7 +19,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $admins = $this->admin->get();
+
+        return view('admin.index', 
+                    compact('admins'));
     }
 
     /**
@@ -79,5 +82,10 @@ class AdminController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function login_view() 
+    {
+        return view("admin.login");
     }
 }
