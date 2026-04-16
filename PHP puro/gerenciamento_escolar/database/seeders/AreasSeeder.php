@@ -13,13 +13,17 @@ class AreasSeeder extends Seeder
      */
     public function run(): void
     {
-        Area::factory()->create(
+        $areas = [
             ['nome' => 'Tecnologia da Informação'],
             ['nome' => 'Tecnologia da moda'],
             ['nome' => 'Automação Industrial'],
             ['nome' => 'Metal Mecânica'],
             ['nome' => 'Biotecnologia'],
             ['nome' => 'Eletromecânica']
-        );
+        ];
+
+        foreach ($areas as $area) {
+            Area::create($area);
+        }
     }
 }
