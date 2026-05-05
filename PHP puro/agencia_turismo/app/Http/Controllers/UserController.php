@@ -47,7 +47,7 @@ class UserController extends Controller
      */
     public function home()
     {
-        return view('welcome');
+        return view('list_all');
     }
 
     /**
