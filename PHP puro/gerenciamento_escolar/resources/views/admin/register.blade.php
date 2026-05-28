@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-    <title>Registrar</title>
+@section('titulo', 'Registrar Admins')
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="h-screen flex justify-center items-center">
+@section('content')
     <div class="flex flex-col items-center h-100 bg-gray-500">
-        <h1>Registrar</h1>
         @if (session('error'))
             {{ session('error') }}
         @endif
@@ -22,6 +15,11 @@
             <input type="password" name="confirmarSenha" class="bg-gray-400 border mt-4" placeholder="Confirmar Senha" id="">
             <button type="submit" class=" hover:cursor-pointer hover:bg-gray-600 mt-10">Registrar</button>
         </form>
+
+        <form action="{{ route('admin.teste') }}" method="post">
+            @csrf
+            <input type="text" name="cpf" id="">
+            <button type="submit">Enviar</button>
+        </form>
     </div>
-</body>
-</html>
+@endsection
