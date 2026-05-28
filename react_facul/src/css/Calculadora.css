@@ -1,0 +1,64 @@
+/* Calculator.css */
+
+body {
+  margin: 0;
+  background: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 280px;
+  background: #666;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.display {
+  height: 100px;
+  background: #666;
+  color: white;
+  font-size: 42px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  height: 70px;
+  border: 1px solid #bbb;
+  background: #e5e5e5;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.orange {
+  background: #ff9500;
+  color: white;
+}
+
+.gray {
+  background: #d4d4d4;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.ac {
+    grid-column: span 3;
+}
