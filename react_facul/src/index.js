@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Aula1 from './pages/Aula1';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Aula2 from './pages/Aula2';
+import AtividadeSomativa1 from './pages/Atividade_Somativa1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +15,8 @@ root.render(
       <Routes>
         <Route path='/aula1' element={ <Aula1/> }/>
         <Route path='/calculadora' element={ <App/> }/>
+        <Route path='/aula2' element={ <Aula2/> }/>
+        <Route path='/atividade_somativa' element={ <AtividadeSomativa1/> }/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
