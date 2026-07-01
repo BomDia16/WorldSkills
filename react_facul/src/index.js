@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Aula1 from './pages/Aula1';
+import Aula1 from './pages/Aulas/Aula1';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Aula2 from './pages/Aula2';
-import AtividadeSomativa1 from './pages/Atividade_Somativa1';
+import Aula2 from './pages/Aulas/Aula2';
+import AtividadeSomativa1 from './pages/AS1/Atividade_Somativa1';
+import Login from './pages/AS2/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,8 @@ root.render(
         <Route path='/calculadora' element={ <App/> }/>
         <Route path='/aula2' element={ <Aula2/> }/>
         <Route path='/atividade_somativa1' element={ <AtividadeSomativa1/> }/>
+
+        <Route path='/login' element={ <Login/> }/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
