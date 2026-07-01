@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Aula1 from './pages/Aula1';
@@ -16,7 +15,7 @@ root.render(
         <Route path='/aula1' element={ <Aula1/> }/>
         <Route path='/calculadora' element={ <App/> }/>
         <Route path='/aula2' element={ <Aula2/> }/>
-        <Route path='/atividade_somativa' element={ <AtividadeSomativa1/> }/>
+        <Route path='/atividade_somativa1' element={ <AtividadeSomativa1/> }/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
