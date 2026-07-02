@@ -24,7 +24,7 @@ class Cadastro extends Component {
         this.cadastrar = this.cadastrar.bind(this)
     }
 
-    // Função para verificar login
+    // Função para cadastrar o usuário tanto na área de autenticação quanto na área dos dados pessoais
     async cadastrar(e) {
         e.preventDefault()
         

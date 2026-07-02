@@ -27,6 +27,7 @@ class Login extends Component {
         
         let state = this.state
 
+        // Verificar login no firebase
         await firebase.auth().signInWithEmailAndPassword(state.email, state.senha)
         .then(() => {
             window.location.href = "./principal"

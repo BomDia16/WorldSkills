@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import firebase from "../../Firebase"
 
-// Tela de Cadastro
+// Tela Principal
 class Principal extends Component {
 
     // construtor com parâmetros iniciais do componente
     constructor(props) {
         super(props)
 
-        // dados do cadastro
+        // dados do usuário logado
         this.state = {
             nome: "",
             sobrenome: "",
@@ -21,6 +21,7 @@ class Principal extends Component {
     // Função para verificar login
     async componentDidMount() {
         
+        // recuperar dados do usuário logado
         await firebase.auth().onAuthStateChanged(async (usuario) => {
             if (usuario) {
                 var uid = usuario.uid
@@ -37,6 +38,7 @@ class Principal extends Component {
         })
     }
 
+    // função de logout
     async logout() {
         await firebase.auth().signOut()
         .then(() => {
@@ -45,7 +47,7 @@ class Principal extends Component {
     }
 
     render() {
-        // Renderização do formulário de cadastro
+        // Renderização dos dados do usuário
         return (
             <div style={{ display: 'flex', flexDirection: 'column' }}>
 
