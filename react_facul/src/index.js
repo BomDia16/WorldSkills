@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Aula2 from './pages/Aulas/Aula2';
 import AtividadeSomativa1 from './pages/AS1/Atividade_Somativa1';
 import Login from './pages/AS2/Login';
+import Cadastro from './pages/AS2/Cadastro';
+import Principal from './pages/AS2/Principal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +21,8 @@ root.render(
         <Route path='/atividade_somativa1' element={ <AtividadeSomativa1/> }/>
 
         <Route path='/login' element={ <Login/> }/>
+        <Route path='/cadastro' element={ <Cadastro/> }/>
+        <Route path='/principal' element={ <Principal/> }/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
