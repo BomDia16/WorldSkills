@@ -11,3 +11,6 @@ As rotas estão no arquivo index.js
 
 Os arquivos da atividade somativa 2 está localizada na pasta pages, AS2.
 As rotas estão listadas no arquivo index.js na pasta src.
+
+## Link do deploy no netlify
+https://6a470e4bc368d599e1edbd03--reactfacul.netlify.app/login
